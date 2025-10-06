@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendaftaran Mahasiswa Baru - UNTAG 2025</title>
+  <link rel="stylesheet" href="CSS.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="untag.png" alt="Logo UNTAG" class="logo">
+      <h1>Universitas 17 Agustus 1945</h1>
+      <p>Formulir Pendaftaran Mahasiswa Baru</p>
+    </header>
+
+    <div class="steps">
+      <div class="step active">1</div>
+      <div class="step">2</div>
+      <div class="step">3</div>
+      <div class="step">4</div>
+      <div class="step">5</div>
+      <div class="step">6</div>
+      <div class="step">7</div>
+    </div>
+
+    <form id="regForm">
+      <!-- STEP 1 -->
+      <section class="page active" data-step="0">
+        <h2>Data Pribadi</h2>
+        <label>Nama Lengkap *</label>
+        <input type="text" name="nama" required placeholder="Nama lengkap sesuai KTP">
+
+        <label>Email *</label>
+        <input type="email" name="email" id="email" required placeholder="contoh: nama@email.com">
+
+        <label>No. Telepon *</label>
+        <input type="tel" name="telepon" required placeholder="08xxxxxxxxxx">
+
+        <label>Tempat & Tanggal Lahir *</label>
+        <input type="date" name="tgl_lahir" required>
+
+        <label>Alamat Lengkap *</label>
+        <textarea name="alamat" required placeholder="Alamat sesuai KTP"></textarea>
+
+        <div class="actions">
+          <button type="button" class="btn next">Lanjut</button>
+        </div>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="page" data-step="1">
+        <h2>Data Pendidikan</h2>
+        <label>Asal Sekolah *</label>
+        <input type="text" name="asal_sekolah" required>
+
+        <label>Tahun Lulus *</label>
+        <input type="number" name="tahun_lulus" required placeholder="Contoh: 2024">
+
+        <label>Jurusan Sekolah *</label>
+        <input type="text" name="jurusan" required>
+
+        <label>Program Studi Pilihan *</label>
+        <select name="prodi" required>
+          <option value="">Pilih Program Studi</option>
+          <option>Teknik Informatika</option>
+          <option>Manajemen</option>
+          <option>Hukum</option>
+          <option>Psikologi</option>
+          <option>Ilmu Komunikasi</option>
+        </select>
+
+        <div class="actions">
+          <button type="button" class="btn prev">Kembali</button>
+          <button type="button" class="btn next">Lanjut</button>
+        </div>
+      </section>
+
+      <!-- STEP 3 -->
+      <section class="page" data-step="2">
+        <h2>Data Orang Tua / Wali</h2>
+        <label>Nama Ayah *</label>
+        <input type="text" name="ayah" required>
+
+        <label>Pekerjaan Ayah</label>
+        <input type="text" name="pekerjaan_ayah">
+
+        <label>Nama Ibu *</label>
+        <input type="text" name="ibu" required>
+
+        <label>Pekerjaan Ibu</label>
+        <input type="text" name="pekerjaan_ibu">
+
+        <label>No. HP Orang Tua *</label>
+        <input type="tel" name="hp_ortu" required placeholder="08xxxxxxxxxx">
+
+        <div class="actions">
+          <button type="button" class="btn prev">Kembali</button>
+          <button type="button" class="btn next">Lanjut</button>
+        </div>
+      </section>
+
+      <!-- STEP 4 -->
+      <section class="page" data-step="3">
+        <h2>Data Pembiayaan</h2>
+        <label>Penanggung Biaya *</label>
+        <select name="penanggung" required>
+          <option value="">Pilih</option>
+          <option>Orang Tua</option>
+          <option>Wali</option>
+          <option>Beasiswa</option>
+          <option>Sendiri</option>
+        </select>
+
+        <label>Jenis Beasiswa (jika ada)</label>
+        <input type="text" name="beasiswa">
+
+        <div class="actions">
+          <button type="button" class="btn prev">Kembali</button>
+          <button type="button" class="btn next">Lanjut</button>
+        </div>
+      </section>
+
+      <!-- STEP 5 -->
+      <section class="page" data-step="4">
+        <h2>Lampiran Dokumen</h2>
+        <label>Upload Ijazah / SKL *</label>
+        <input type="file" name="ijazah" required>
+
+        <label>Upload Pas Foto *</label>
+        <input type="file" name="foto" required>
+
+        <label>Upload Bukti Pembayaran</label>
+        <input type="file" name="bukti">
+
+        <div class="actions">
+          <button type="button" class="btn prev">Kembali</button>
+          <button type="button" class="btn next">Lanjut</button>
+        </div>
+      </section>
+
+      <!-- STEP 6 -->
+      <section class="page" data-step="5">
+      <h2>Pernyataan & Persetujuan</h2>
+        <p>Dengan ini saya menyatakan bahwa seluruh data yang saya isi adalah benar.</p>
+
+      <div class="checkbox-area">
+         <input type="checkbox" id="agree">
+         <label for="agree">Saya menyetujui syarat dan ketentuan pendaftaran.</label>
+       </div>
+
+       <div class="actions">
+         <button type="button" class="btn prev">Kembali</button>
+         <button type="button" class="btn next">Lanjut</button>
+       </div>
+    </section>
+
+
+      <!-- STEP 7 -->
+      <section class="page" data-step="6">
+        <h2>Konfirmasi Akhir</h2>
+        <p>Periksa kembali data Anda sebelum mengirim formulir.</p>
+        <div class="actions">
+          <button type="button" class="btn prev">Kembali</button>
+          <button type="submit" class="btn submit">Kirim Pendaftaran</button>
+        </div>
+      </section>
+    </form>
+  </div>
+
+  <script src="JS.js"></script>
+</body>
+</html>
